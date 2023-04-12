@@ -1,25 +1,37 @@
 # How to run?
 
-1. Activate venv:
+1. Create venv (if not already created)
+
+```shell
+python -m venv venv
+```
+
+2. Activate venv:
 
 ```shell
 source venv/bin/activate
 ```
 
-2. Install dependencies
+3. Install dependencies
 
 ```shell
 pip install -r requirements.txt
 ```
 
-3. Launch Weaviate
+4. Launch Weaviate
 
 ```shell
-docker-compose up -d
+make up
 ```
 
-4. Launch project to feed the database
+5. Create schema
 
 ```shell
-python main.py
+python create_schema.py
+```
+
+6. Feed the database
+
+```shell
+python feed_database.py
 ```
