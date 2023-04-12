@@ -9,8 +9,6 @@ load_dotenv()
 
 OPEN_AI_KEY = os.getenv('OPEN_AI_KEY')
 WEAVIATE_URL = os.getenv('WEAVIATE_URL')
-REUTERS_RSS_FEED = os.getenv('REUTERS_RSS_FEED')
-
 
 def get_source(url):
     try:
@@ -25,7 +23,10 @@ def get_feed(url):
 
 
 def run():
-    rss_url = REUTERS_RSS_FEED
+    rss_url = [
+        'https://www.reutersagency.com/feed/?best-regions=middle-east&post_type=best',
+        'https://www.crisisgroup.org/rss'
+    ]
     client = weaviate.Client(
         url=WEAVIATE_URL,
         additional_headers={
