@@ -33,5 +33,11 @@ python create_schema.py
 6. Feed the database
 
 ```shell
-python feed_database.py
+python feed_database_with_mocks.py
+```
+
+Or instead of launching the commands form 4th, 5th and 6th step, you can run the following command:
+
+```shell
+make seed
 ```
