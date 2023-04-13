@@ -21,3 +21,8 @@ logs: ## Shows the application logs
 
 clean: ## Removes all containers and images
 	@docker-compose down --rmi all --volumes --remove-orphans
+
+seed: ## Seeds the database
+	@python delete_schema.py
+	@python create_schema.py
+	@python feed_database_with_mocks.py
