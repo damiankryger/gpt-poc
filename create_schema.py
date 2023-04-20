@@ -41,6 +41,16 @@ def create_schema():
                     "dataType": ["text"],
                     "name": "content",
                     "description": "The content of the feed item"
+                },
+                {
+                    "dataType": ["text"],
+                    "name": "summary",
+                    "description": "The summary of the feed item"
+                },
+                {
+                    "dataType": ["string"],
+                    "name": "link",
+                    "description": "Link to the original content"
                 }
             ]
         }
